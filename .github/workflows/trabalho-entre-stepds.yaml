@@ -1,6 +1,5 @@
-name: Primeiro Workflow linuxtips
+name: Vendo arquivos compartilhados entre steps
 
-#definindo o trigger do tipo push, para toda vez que um commit for feito o workflow será executado.
 
 on:
   push:
@@ -10,7 +9,7 @@ on:
 
 #serviço 
 jobs:    
-  giropops:
+  entre-steps:
     runs-on: ubuntu-latest
     steps:
       - name: Confere versão do ubuntu
