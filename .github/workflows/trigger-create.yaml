@@ -1,0 +1,12 @@
+name: Testando a regra de protection rule
+
+on:
+  create 
+  
+jobs:
+  print-modification:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Avisa sobre criação da brannch ou tag
+        run: echo "Uma nova branch ou tag foi criada"
