@@ -1,4 +1,4 @@
-name: Testando a regra de protection rule
+name: Testando o trigger do tipo create
 
 on:
   create 
