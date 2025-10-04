@@ -1,22 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# script.sh
 
-# Nome do ficheiro de saída
-OUTPUT="resultado.txt"
+echo "=== Resultado do Script ===" > resultado.txt
+echo "Data de execução: $(date '+%Y-%m-%d %H:%M:%S')" >> resultado.txt
+echo "Hostname: $(hostname)" >> resultado.txt
+echo "Usuário atual: $(whoami)" >> resultado.txt
+echo "Diretório atual: $(pwd)" >> resultado.txt
+echo "-----------------------------" >> resultado.txt
 
-# Gerar conteúdo (exemplo com data e hora)
-echo "Relatório gerado em $(date)" > $OUTPUT
-echo "==============================" >> $OUTPUT
-echo "" >> $OUTPUT
-
-# Exemplo: listar ficheiros do repositório
-echo "Ficheiros no repositório:" >> $OUTPUT
-ls -lh >> $OUTPUT
-echo "" >> $OUTPUT
-
-# Exemplo: mostrar uso de disco
-echo "Uso de disco:" >> $OUTPUT
-df -h >> $OUTPUT
-
-# Mensagem final
-echo "" >> $OUTPUT
-echo "Script finalizado com sucesso!" >> $OUTPUT
+echo "Arquivo resultado.txt criado com sucesso!"
