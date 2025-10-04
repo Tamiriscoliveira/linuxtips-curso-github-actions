@@ -10,16 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4   # <--- IMPORTANTE!
 
       - name: Verifica hostname
         run: cat /etc/hostname
+
+      - name: Listar arquivos no workspace
+        run: ls -lha                 # <--- só para conferir que o script.sh está lá
 
       - name: Upload do script
         uses: actions/upload-artifact@v4
         with:
           name: bash-upload
-          path: script.sh
+          path: script.sh            # <--- caminho relativo ao repo
 
   job-download:
     runs-on: ubuntu-latest
@@ -31,7 +34,7 @@ jobs:
       - name: Download do script
         uses: actions/download-artifact@v4
         with:
-          name: bash-upload       # mesmo nome do upload
+          name: bash-upload          # nome igual ao do upload
           path: bash-upload
 
       - name: Listar arquivos após download
@@ -48,7 +51,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1  # ajuste conforme necessário
+          aws-region: us-east-1
 
       - name: Enviar arquivo para S3
         run: |
