@@ -4,7 +4,7 @@ on:
   create 
   
 jobs:
-  print-modification:
+  print-branch-or-tag-creation:
     runs-on: ubuntu-latest
     steps:
 
