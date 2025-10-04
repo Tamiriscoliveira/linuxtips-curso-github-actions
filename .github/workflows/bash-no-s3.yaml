@@ -19,8 +19,11 @@ jobs:
 
   job_downnload:
     runs-on: ubuntu-latest
-    needs: job_1
+    needs: job-upload
     steps:
+    - name: Ver o conteudo do diretorio
+      run: ls -lha
+      
     - uses: actions/download-artifact@v4
       with:
         name: bash-download
