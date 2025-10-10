@@ -20,4 +20,7 @@ jobs:
       - name: Executando
         run: | #os scripts serão executados a partir de './scripts'
            ./script.sh
+           
+      - name: listar os arquivos no workspace
+        run: ls -lha 
 
