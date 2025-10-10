@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bash-upload
-          path: scripts/resultado.txt  
+          path: scripts/resultado.csv
  
   
   job-download:
@@ -46,7 +46,7 @@ jobs:
           path: bash-upload
 
       - name: Listar arquivos após download
-        run: ls -lha ./bash-upload/resultado.txt
+        run: ls -lha ./bash-upload/resultado.csv
 
       - name: Configurar credenciais da AWS
         uses: aws-actions/configure-aws-credentials@v4
@@ -57,4 +57,4 @@ jobs:
 
       - name: Enviar arquivo para S3
         run: |
-          aws s3 cp bash-upload/resultado.txt s3://aula-terraform-tamiris/desafio-teamcard/resultado-$(date +%Y-%m-%d).txt
+          aws s3 cp bash-upload/resultado.csv s3://aula-terraform-tamiris/desafio-teamcard/resultado-$(date +%Y-%m-%d).txt
