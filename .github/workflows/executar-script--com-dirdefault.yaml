@@ -57,4 +57,4 @@ jobs:
 
       - name: Enviar arquivo para S3
         run: |
-          aws s3 cp bash-upload/resultado.csv s3://aula-terraform-tamiris/desafio-teamcard/resultado-$(date +%Y-%m-%d).txt
+          aws s3 cp bash-upload/resultado.csv s3://aula-terraform-tamiris/desafio-teamcard/resultado-$(date +%Y-%m-%d).csv
