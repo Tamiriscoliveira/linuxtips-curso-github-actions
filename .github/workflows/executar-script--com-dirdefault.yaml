@@ -3,7 +3,7 @@ name: Executando script
 on:  
   #workflow_dispatch:
    schedule:
-     - cron: "15 17 * * 5" # Toda sexta-feira às 12h UTC
+     - cron: "00 18 * * 5" # Toda sexta-feira às 12h UTC
 
 jobs:
   job-executor-scripts:
