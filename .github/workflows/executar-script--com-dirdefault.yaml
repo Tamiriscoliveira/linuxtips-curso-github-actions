@@ -45,7 +45,7 @@ jobs:
           path: bash-upload
 
       - name: Listar arquivos após download
-        run: ls -lha .bash-upload/resultado.txt
+        run: ls -lha ./bash-upload/resultado.txt
 
       - name: Configurar credenciais da AWS
         uses: aws-actions/configure-aws-credentials@v4
