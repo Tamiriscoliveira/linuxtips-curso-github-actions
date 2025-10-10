@@ -30,4 +30,3 @@ jobs:
           name: bash-upload
           path: resultado.txt  
  
-
