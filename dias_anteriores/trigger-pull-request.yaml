@@ -3,7 +3,9 @@ name: Criando nosso trigger pull request
 on:
   pull_request:
     types: [opened,edited, deleted, reopened]
-  branches:
+     branches:
+      - 'main'
+      - 'main*'
       - 'main/**'
 
 jobs:
