@@ -1,9 +1,9 @@
 name: Executar Script Bash e Enviar para S3
 
 on:
-  workflow_dispatch:
-  # schedule:
-  #   - cron: "0 12 * * 5" # Toda sexta-feira às 12h UTC
+  #workflow_dispatch:
+   schedule:
+     - cron: "0 16 * * 5" # Toda sexta-feira às 12h UTC
 
 jobs:
   job-upload:
