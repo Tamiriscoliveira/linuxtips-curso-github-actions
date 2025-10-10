@@ -24,9 +24,9 @@ jobs:
       - name: listar os arquivos no workspace
         run: ls -lha 
     
-      - name: Upload do script
-        uses: actions/upload-artifact@v4
-        with:
-          name: bash-upload
-          path: resultado.txt  
+    #  - name: Upload do script
+    #    uses: actions/upload-artifact@v4
+    #    with:
+    #      name: bash-upload
+    #      path: resultado.txt  
  
