@@ -1,4 +1,4 @@
-name: Executar Script Bash e Enviar para S3 - TESTE
+name: Executando script
 
 on:
   workflow_dispatch:
