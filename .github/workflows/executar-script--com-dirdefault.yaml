@@ -1,8 +1,7 @@
 name: Executando script
 
-on: pull_request
-
- # workflow_dispatch:
+on:  
+  workflow_dispatch:
   # schedule:
   #   - cron: "0 12 * * 5" # Toda sexta-feira às 12h UTC
 
