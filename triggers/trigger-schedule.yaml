@@ -1,0 +1,17 @@
+ame: Criando nosso trigger Schedule
+
+on:
+  schedule:
+    - cron: 35 23 * * 5 # <--- Cron Fixo
+    - cron: '*/5 * * * 5'
+
+jobs:
+  executa-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Informa Horário Específico com Cron Fixo
+        if: github.event.schedule == '35 23 * * 5'
+        run: echo "Esse step rodou pois essa execução foi pelo horário agendado"
+
+      - name: Informa Horário
+        run: echo "Nesse step passam todos os crons, agora são $(date) UTC"
