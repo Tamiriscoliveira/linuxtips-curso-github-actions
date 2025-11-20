@@ -11,4 +11,4 @@ jobs:
   chama-workflow:
     uses: .github/workflows/trigger-workflw-call.yaml
     with:
-      nome-do-curso-enviado: ${{ inputs.nome-do-curso-enviado }}
+      nome-do-curso-recebido: ${{ inputs.nome-do-curso-enviado }}
