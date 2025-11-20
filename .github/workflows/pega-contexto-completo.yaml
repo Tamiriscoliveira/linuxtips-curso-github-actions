@@ -1,0 +1,14 @@
+name: Context testing
+on: push
+
+jobs:
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          PROPRIETARIO: ${{ github.repository_owner }}
+          SHA_COMMIT: ${{ github.sha }}
+        run: |
+          echo "Proprietário do Repositório: $PROPRIETARIO"
+          echo "SHA do Commit: $SHA_COMMIT"
