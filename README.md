@@ -3,6 +3,7 @@
 ## Estou editando este arquivo com o GithubDev!
 
 Repositório para armazenar os códigos de workflow do curso GittHub Actions da LinuxTips
+<p>
 Instrutor: Fabio Bartoli
 
 # Links Úteis 
