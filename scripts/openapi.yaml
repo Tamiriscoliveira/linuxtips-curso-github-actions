@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: API de Pedidos
+  version: 1.4.2
+servers:
+  - url: https://api.exemplo.com
+paths:
+  /orders:
+    get:
+      summary: Lista pedidos
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        id:
+          type: string
+
