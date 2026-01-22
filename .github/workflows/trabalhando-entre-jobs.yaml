@@ -1,4 +1,4 @@
-name: Trabalhando entre jobs 
+name: Vendo arquivos compartilhados entre Steps
 
 on:
   workflow_dispatch:
@@ -7,23 +7,22 @@ jobs:
   job_1:
     runs-on: ubuntu-latest
     steps:
-      - name: Confere a versão do ubuntu
+      - name: Confere versao do Ubuntu
         run: cat /etc/os-release
-
+      
       - name: Exibir uma mensagem
-        run: echo "Estou fazendo o curso de GitHub Actions da LinuxTips"
+        run: echo "Estou fazendo o curso de Github Actions da Linuxtips" > ${{ github.workspace }}/mensagem.txt
 
       - uses: actions/upload-artifact@v4
         with:
           name: strigus-upload
-          path: ${{ github.workspace }}/mensagem.txt  #github.workspace acessa um caminho válido dentro do runner(maquina)
+          path: ${{ github.workspace }}/mensagem.txt
 
-  
   job_2:
     runs-on: ubuntu-latest
     needs: job_1
     steps:
-      - name: Ver o conteudo do diretório
+      - name: Ver o conteudo do diretorio
         run: ls -lha
 
       - uses: actions/download-artifact@v4
@@ -31,7 +30,7 @@ jobs:
           name: strigus-upload
           path: strigus
 
-      - name: Ver o conteudo do diretório
+      - name: Ver o conteudo do diretorio
         run: ls -lha && ls ./strigus/
 
       - name: Acessa arquivo mensagem
@@ -41,4 +40,4 @@ jobs:
         run: ls -lha
 
       - name: Acessa arquivo mensagem
-        run: cat mensagem.txt 
+        run: cat mensagem.txt
