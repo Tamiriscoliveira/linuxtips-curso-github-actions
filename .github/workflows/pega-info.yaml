@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults: 
       run:
-        working-directory: ./scripts  # define o diretório de trabalho padrão para os steps desse jop
+        working-directory: ./scripts
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
@@ -23,11 +23,12 @@ jobs:
         run: |
           echo "TITLE=$(yq '.info.title' openapi.yaml)" >> $GITHUB_ENV
           echo "VERSION=$(yq '.info.version' openapi.yaml)" >> $GITHUB_ENV
-          echo "REPO=$(yq '.info.x-repository-name' openapi.yaml)" >> $GITHUB_ENV
+
+          # nome real do repositório vindo do GitHub
+          echo "REPO_NAME=${GITHUB_REPOSITORY##*/}" >> $GITHUB_ENV
 
       - name: Mostrar valores
         run: |
-          echo "Repo: $REPO"
+          echo "Repo (GitHub): $REPO_NAME"
           echo "Title: $TITLE"
           echo "Version: $VERSION"
-
