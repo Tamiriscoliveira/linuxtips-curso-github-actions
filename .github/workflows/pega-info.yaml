@@ -6,6 +6,9 @@ on:
 jobs:
   job-teste:
     runs-on: ubuntu-latest
+    defaults: 
+      run:
+        working-directory: ./scripts  # define o diretório de trabalho padrão para os steps desse jop
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
