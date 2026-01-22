@@ -1,0 +1,30 @@
+name: Pega informação openapi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar yq
+        run: |
+          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
+          sudo chmod +x /usr/local/bin/yq
+          yq --version
+
+      - name: Read OpenAPI metadata
+        run: |
+          echo "TITLE=$(yq '.info.title' openapi.yaml)" >> $GITHUB_ENV
+          echo "VERSION=$(yq '.info.version' openapi.yaml)" >> $GITHUB_ENV
+          echo "REPO=$(yq '.info.x-repository-name' openapi.yaml)" >> $GITHUB_ENV
+
+      - name: Mostrar valores
+        run: |
+          echo "Repo: $REPO"
+          echo "Title: $TITLE"
+          echo "Version: $VERSION"
+
