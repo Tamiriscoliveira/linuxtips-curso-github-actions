@@ -10,7 +10,7 @@ jobs:
       - name: Confere a versão do ubuntu
         run: cat /etc/os-release
 
-      - nane: Exibir uma mensagem
+      - name: Exibir uma mensagem
         run: echo "Estou fazendo o curso de GitHub Actions da LinuxTips"
 
       - uses: actions/upload-artifact@v4
