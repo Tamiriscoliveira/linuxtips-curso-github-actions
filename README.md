@@ -27,3 +27,7 @@ DOWNLOAD ARTIFACT: https://github.com/actions/download-artifact
 UPLOAD ARTIFACT: https://github.com/actions/upload-artifact 
 
 RUNNER IMAGES: https://github.com/actions/runner-images
+
+Branch Protection: https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule
+
+CODEOWNERS: https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
