@@ -10,7 +10,7 @@ Exploramos o modelo centralizado de versionamento, onde todo o código fica arma
 Vimos também o modelo distribuído, no qual cada desenvolvedor possui uma cópia completa do repositório. Esse modelo oferece mais flexibilidade, segurança 
 e autonomia, permitindo trabalhar localmente, criar branches e realizar fusões de forma mais eficiente antes de compartilhar alterações com o time.
 
-![fluxo-versionamento](Day-1/versionamento.png)
+![fluxo-versionamento](./Day-1/versionamento.png)
 
 <p>
 ##GITHUB ACTIONS
