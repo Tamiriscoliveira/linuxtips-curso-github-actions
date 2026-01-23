@@ -31,3 +31,5 @@ RUNNER IMAGES: https://github.com/actions/runner-images
 Branch Protection: https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule
 
 CODEOWNERS: https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+Eventos que disparam um fluxo de trabalho: https://docs.github.com/pt/actions/reference/workflows-and-actions/events-that-trigger-workflows

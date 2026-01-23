@@ -1,0 +1,43 @@
+No primeiro dia foi apresentado o conceito de versionamento de código, quando surgiu o github actions.
+Teve a explicação de jobs e steps e do conceito de compartilhamento de arquivos.
+<p>
+## VERSIONAMENTO DE CÓDIGO
+<p>
+Neste primeiro dia vimos a importância no controle de alterações em projetos e como esse processo permite registrar o histórico de mudanças, identificar 
+autores de cada modificação, reverter versões quando necessário e facilitar o trabalho em equipe de forma segura e organizada.
+<p>
+Exploramos o modelo centralizado de versionamento, onde todo o código fica armazenado em um único servidor e discutimos suas limitações. 
+Vimos também o modelo distribuído, no qual cada desenvolvedor possui uma cópia completa do repositório. Esse modelo oferece mais flexibilidade, segurança 
+e autonomia, permitindo trabalhar localmente, criar branches e realizar fusões de forma mais eficiente antes de compartilhar alterações com o time.
+<p>
+##GITHUB ACTIONS
+<p>
+O GitHub Actions surgiu em 2018 como uma solução para automatizar fluxos de trabalho dentro do próprio GitHub, facilitando o CI/CD diretamente no 
+repositório. Antes disso, os desenvolvedores dependiam de ferramentas externas para automatizar testes, builds e deploys. Com o GitHub Actions, tornou-se 
+possível configurar essas automações de forma nativa, respondendo a eventos como push, pull request ou criação de tags, reduzindo a complexidade e 
+melhorando a integração entre código, testes e entrega de software.
+<p>
+Criamos nosso primeiro workflow, que são conjuntos de etapas automatizadas definidas em arquivos YAML dentro do repositório, utilizados para 
+executar tarefas como testes, builds, deploys e outras ações relacionadas ao ciclo de vida do software. Eles são acionados por eventos específicos, como 
+push, pull request, ou agendamentos, e podem conter um ou mais jobs que rodam em sequência ou paralelamente. Os workflows permitem que equipes automatizem 
+processos repetitivos, garantam qualidade e acelerem a entrega de aplicações de forma integrada ao GitHub.
+<p>
+Aprendemos que, formalmente, GitHub Actions são as unidades reutilizáveis de automação que executam tarefas específicas dentro dos steps de um workflow. 
+Elas podem ser desenvolvidas pela comunidade, pela própria equipe ou fornecidas oficialmente pelo GitHub, e são incluídas nos workflows para realizar 
+ações como configurar ambientes, fazer login em serviços, executar comandos ou publicar artefatos.
+<p>
+## JOBS E STEPS
+<p>
+Um job é uma unidade de execução dentro de um workflow, composta por um ou mais steps. Cada job é executado em um ambiente isolado 
+(como uma máquina virtual) e pode rodar em paralelo com outros jobs, a menos que haja dependências definidas. Já os steps são as instruções 
+individuais dentro de um job — elas são executadas sequencialmente e podem incluir comandos de shell ou ações reutilizáveis (actions) da comunidade 
+ou da própria equipe. Enquanto os jobs organizam o fluxo geral do processo, os steps detalham cada ação necessária para completar uma tarefa, como 
+instalar dependências, rodar testes ou realizar um deploy.
+<p>
+## COMPARTILHANDO ARQUIVOS
+<p>
+Aprendemos que é possível compartilhar arquivos entre steps dentro de um mesmo job utilizando o sistema de arquivos local, já que todos os steps de 
+um job rodam na mesma máquina. Por exemplo, um step pode gerar um arquivo que será lido por outro step subsequente no mesmo job. Já para compartilhar 
+arquivos entre jobs, é necessário usar um recurso chamado artifacts. Com ele, um job pode "salvar" arquivos temporariamente e outro job pode "baixá-los" 
+posteriormente, permitindo a troca de dados mesmo entre ambientes diferentes. Isso é útil, por exemplo, para reutilizar arquivos de build ou 
+relatórios de testes gerados por jobs anteriores.
