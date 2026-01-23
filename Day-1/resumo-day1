@@ -9,6 +9,7 @@ autores de cada modificação, reverter versões quando necessário e facilitar 
 Exploramos o modelo centralizado de versionamento, onde todo o código fica armazenado em um único servidor e discutimos suas limitações. 
 Vimos também o modelo distribuído, no qual cada desenvolvedor possui uma cópia completa do repositório. Esse modelo oferece mais flexibilidade, segurança 
 e autonomia, permitindo trabalhar localmente, criar branches e realizar fusões de forma mais eficiente antes de compartilhar alterações com o time.
+
 <p>
 ##GITHUB ACTIONS
 <p>
