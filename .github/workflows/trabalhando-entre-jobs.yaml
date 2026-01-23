@@ -24,9 +24,13 @@ jobs:
     steps:
       - name: Ver o conteudo do diretorio
         run: ls -lha
-
+              
+              #owner/repo@ref    maneira de chamar o ref das o tags, pode ser branch ou commit
+              #owner/repo/aws@ref   
       - uses: actions/download-artifact@v4
-        with:
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:    #quando tem instruções para ser passadas, tbm pode ser usado o env(variaveis, secrets) ${{secrets.GITHUB_TOKEN}}
           name: strigus-upload
           path: strigus
 
