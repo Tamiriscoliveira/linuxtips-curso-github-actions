@@ -13,7 +13,7 @@ e autonomia, permitindo trabalhar localmente, criar branches e realizar fusões 
 ![fluxo-versionamento](https://github.com/Tamiriscoliveira/linuxtips-curso-github-actions/blob/d94fa8dd91b18e958acd7a1cd2b302f158c6c97c/Day-1/versionamento.png)
 
 <p>
-##GITHUB ACTIONS
+GITHUB ACTIONS
 <p>
 O GitHub Actions surgiu em 2018 como uma solução para automatizar fluxos de trabalho dentro do próprio GitHub, facilitando o CI/CD diretamente no 
 repositório. Antes disso, os desenvolvedores dependiam de ferramentas externas para automatizar testes, builds e deploys. Com o GitHub Actions, tornou-se 
