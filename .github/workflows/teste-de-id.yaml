@@ -1,4 +1,4 @@
-ame: Teste de ID
+name: Teste de ID
 
 on: workflow_dispatch
 
