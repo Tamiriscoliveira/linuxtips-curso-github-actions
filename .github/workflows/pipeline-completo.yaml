@@ -80,7 +80,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and Push Docker Image
+
+
+
+      - name: Build and Push Docker Image      
         id: build_push
         run: |
           repo_lc=$(echo "${GITHUB_REPOSITORY}" | tr '[:upper:]' '[:lower:]')
