@@ -1,26 +1,27 @@
-name: Teste de ID 
+ame: Teste de ID
 
 on: workflow_dispatch
 
-
 jobs:
-   build: # job id chamado build, sempre minuscula, sem espaço e não pode começar com número
-     runs-on: ubuntu-latest
-     steps:
-       - name: Teste de cobertura
-         id: test-cobertura # step id chamado test-cobertura, sempre minuscula, sem espaço e não pode começar com número
-         run: echo "porcentagem=87" >> "$GITHUB_OUTPUT"
-     outputs:
-       test-cobertura: ${{steps.test-cobertura.outputs.porcentagem }}
+  build: # JOB ID = build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testes de cobertura
+        id: test-cobertura #STEP ID = test-cobertura
+        run: echo "porcentagem=12" >> "$GITHUB_OUTPUT"
+    outputs: 
+      test-cobertura: ${{ steps.test-cobertura.outputs.porcentagem }}
 
 
-   quality-gate: # job id chamado quality-gate
-     needs: build
-     runs-on: ubuntu-latest
-     run: |
-       echo "Cobertura mínima: 80%"
-       echo "Cobertura obtida: ${{ needs.outputs.test-cobertura}}%"
-       if (( ${{ needs.build.outputs.test-cobertura }} < 80)); then
-         echo "::error::Build reprovado por baixa cobertura"
-         exit 1
-       fi
+  quality-gate: # JOB ID = quality-gate
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Quality Gate Tests
+        run: |
+          echo "Cobertura mínima: 80%"
+          echo "Cobertura obtida: ${{ needs.build.outputs.test-cobertura }}%"
+          if (( ${{ needs.build.outputs.test-cobertura }} < 80 )); then
+            echo "::error::Build reprovado por baixa cobertura"
+            exit 1
+          fi
