@@ -9,4 +9,4 @@ jobs:
         run: |
            echo "Pega informações sobre a maquina que esta executando o workflow: ${{ github.runner }}"
 
-      - name: 
+      
