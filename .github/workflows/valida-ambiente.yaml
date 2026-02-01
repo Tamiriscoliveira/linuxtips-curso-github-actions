@@ -9,7 +9,7 @@ jobs:
     environment: production
     steps: 
       - name: Printa Valor
-        run: echo "Estou no ambiente: ${{vars.AMBIENTE }}"
+        run: echo "Estou no ambiente: ${{ vars.AMBIENTE }}"
 
     valida-ambiente-STG:
     if: ${{ github.ref_name == 'staging' }}
@@ -17,5 +17,5 @@ jobs:
     environment: staging
     steps: 
       - name: Printa Valor
-        run: echo "Estou no ambiente: ${{vars.AMBIENTE }}"
+        run: echo "Estou no ambiente: ${{ vars.AMBIENTE }}"
   
