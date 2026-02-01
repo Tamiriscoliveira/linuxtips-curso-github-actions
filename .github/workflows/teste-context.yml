@@ -1,5 +1,5 @@
 name: context testing
-on: push
+on: workflow_dispatch:
 
 jobs: 
   dump_context:
@@ -8,4 +8,5 @@ jobs:
       - name: pega informação do RNNNER
         run: |
            echo "Pega informações sobre a maquina que esta executando o workflow: ${{ github.runner }}"
-        
+
+      - name: 
