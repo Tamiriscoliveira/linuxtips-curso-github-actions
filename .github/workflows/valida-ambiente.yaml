@@ -1,0 +1,21 @@
+name: Valida Ambiente
+
+on: push
+
+jobs:
+  valida-ambiente-PRD:
+    if: ${{ github.ref_name == 'main' }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps: 
+      - name: Printa Valor
+        run: echo "Estou no ambiente: ${{vars.AMBIENTE }}"
+
+    valida-ambiente-STG:
+    if: ${{ github.ref_name == 'staging' }}
+    runs-on: ubuntu-latest
+    environment: staging
+    steps: 
+      - name: Printa Valor
+        run: echo "Estou no ambiente: ${{vars.AMBIENTE }}"
+  
