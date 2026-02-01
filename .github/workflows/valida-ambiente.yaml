@@ -4,7 +4,7 @@ on: push
 
 jobs:
   valida-ambiente:
-    if: ${{ github.ref == staging }}
+    if: ${{ github.ref == 'staging' }}
     runs-on: ubuntu-latest
     steps: 
       - name: Verifica branch
