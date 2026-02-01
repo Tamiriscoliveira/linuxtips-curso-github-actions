@@ -5,8 +5,9 @@ on:
 
 jobs:
   valida-ambiente:
-  runs-on: ubuntu-latest
-  name: Verifica o nome da branch
-  run: |
-    echo "Qual branch esta sendo executada: ${{github.ref_name }}"
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Verifica o nome da branch
+        run: |
+           echo "Qual branch esta sendo executada: ${{ github.ref_name }}"
   
