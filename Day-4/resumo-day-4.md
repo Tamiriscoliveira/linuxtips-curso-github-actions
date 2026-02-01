@@ -53,9 +53,16 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/inst
 COMANDOS DE FLUXO DE TRABALHO PARA O GITHUB ACTIONS:  https://docs.github.com/pt/actions/reference/workflows-and-actions/workflow-commands
 GITHUB PACKAGES: https://docs.github.com/pt/packages/learn-github-packages/introduction-to-github-packages,
 
+<br>
 
+SEGURANÇA PARA O GITHUB ACTIONS
+Fortalecimento de segurança para o GitHub Actions: https://docs.github.com/pt/enterprise-server@3.13/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
 
+A documentação acima, que eu mostrei na aula, foi descontinuada. Por isso fixei a URL de um "enterprise-server" qualquer. A documentação atual é:
 
+Referência de uso seguro: https://docs.github.com/pt/actions/reference/security/secure-use
+
+Libsodium Sealed boxes: https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes
 
 
 
