@@ -3,7 +3,7 @@ on: push
 
 jobs: 
   dump_context:
-    runs_on: ubunut-latest
+    runs-on: ubunut-latest
     steps:
       - name: pega informação do RNNNER
         run: |
