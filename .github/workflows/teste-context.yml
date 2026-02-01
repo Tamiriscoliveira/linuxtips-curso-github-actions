@@ -1,7 +1,7 @@
 name: context testing
 
 on: 
-  workflow_dispatch:
+  workflow_dispatch: 
 
 jobs: 
   dump_context:
