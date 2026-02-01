@@ -1,7 +1,7 @@
 name: Valida Ambiente
 
 on: 
-  workflow_distach:
+  workflow_distach
 
 jobs:
   valida-ambiente:
