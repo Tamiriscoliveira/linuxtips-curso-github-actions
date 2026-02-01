@@ -3,10 +3,19 @@ name: Valida Ambiente
 on: push
 
 jobs:
-  valida-ambiente:
-    if: ${{ github.ref == 'staging' }}
+  valida-ambiente-PRD:
+    if: ${{ github.ref_name == 'main' }}
     runs-on: ubuntu-latest
+    environment: production
     steps: 
-      - name: Verifica branch
-        run: echo "Qual branch esta sendo executada: $GITHUB_REF"
+      - name: Printa Valor
+        run: echo "Estou no ambiente: ${{vars.AMBIENTE }}"
+
+    valida-ambiente-STG:
+    if: ${{ github.ref_name == 'staging' }}
+    runs-on: ubuntu-latest
+    environment: staging
+    steps: 
+      - name: Printa Valor
+        run: echo "Estou no ambiente: ${{vars.AMBIENTE }}"
   
