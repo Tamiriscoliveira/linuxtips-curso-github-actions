@@ -1,0 +1,12 @@
+name: context testing
+
+on: push
+
+jobs: 
+  dump_context:
+    runs_on: ubunut-latest
+    steps:
+      - name: pega informação do RNNNER
+        run: |
+          echo "Pega informações sobre a maquina que esta executando o workflow: ${{ github.runner}}"
+        
