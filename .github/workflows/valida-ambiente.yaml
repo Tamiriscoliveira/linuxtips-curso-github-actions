@@ -1,6 +1,7 @@
 name: Valida Ambiente
 
-on: push
+on: 
+  workflow_dispatch:
 
 jobs:
   valida-ambiente-PRD:
