@@ -1,0 +1,12 @@
+name: Valida Ambiente
+
+on: 
+  workflow_distach:
+
+jobs:
+  valida-ambiente:
+  runs-on: ubuntu-latest
+  name: Verifica o nome da branch
+  run: |
+    echo "Qual branch esta sendo executada: ${{github.ref_name }}"
+  
