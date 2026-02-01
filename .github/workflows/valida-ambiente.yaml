@@ -1,13 +1,12 @@
 name: Valida Ambiente
 
-on: 
-  workflow_distach:
+on: push
 
 jobs:
   valida-ambiente:
+    if: ${{ github.ref == staging }}
     runs-on: ubuntu-latest
     steps: 
-      - name: Verifica o nome da branch
-        run: |
-           echo "Qual branch esta sendo executada: ${{ github.ref }}"
+      - name: Verifica branch
+        run: echo "Qual branch esta sendo executada: $GITHUB_REF"
   
