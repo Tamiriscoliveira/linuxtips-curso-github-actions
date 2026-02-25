@@ -1,0 +1,19 @@
+name: Teste aula
+
+on:
+  workflow_dispacth:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: lista arquivo
+        run: ls -la ./scripsts
+
+      - name: adiciona ṕermissão de execução
+        run: chmod +x ./scripsts/teste-aula.sh
+
+      - name: Executa o scrip
+        run: ./scripsts/teste-aula.sh
