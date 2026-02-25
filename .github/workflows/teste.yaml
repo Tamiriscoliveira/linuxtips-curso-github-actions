@@ -10,10 +10,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: lista arquivo
-        run: ls -la ./scripsts
+        run: ls -la ./scripts
 
       - name: adiciona ṕermissão de execução
-        run: chmod +x ./scripsts/teste-aula.sh
+        run: chmod +x ./scripts/teste-aula.sh
 
       - name: Executa o scrip
-        run: ./scripsts/teste-aula.sh
+        run: ./scripts/teste-aula.sh
