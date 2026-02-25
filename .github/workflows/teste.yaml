@@ -1,7 +1,7 @@
 name: Teste aula
 
 on:
-  workflow_dispacth:
+  workflow_dispatch:
 
 jobs:
   teste:
