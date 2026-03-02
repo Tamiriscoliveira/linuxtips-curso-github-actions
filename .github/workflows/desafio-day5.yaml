@@ -1,0 +1,46 @@
+name: Desafio Day-y
+
+on:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: 🔍 Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🚨 Executar ESLint
+        run: npm run lint
+
+  test:
+    name: 🧪 Testes
+    runs-on: ubuntu-latest
+    needs: lint  # 👈 Garante que só roda se o lint passar
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🧪 Executar testes com Jest
+        run: npm test
